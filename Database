@@ -1,0 +1,9 @@
+create table student(student_id varchar(20) primary key,fname varchar (20),lname varchar(20),email varchar(20),branch_id varchar(20)
+foreign key (branch_id)references branch(branch_id));
+
+create table teacher(teacher_id varchar(20) primary key,fname varchar (20),lname varchar(20),email varchar(20),branch_id varchar(20)
+foreign key (branch_id)references branch(branch_id));
+
+create table branch(branch_id varchar(20) primary key,branch_name varchar(20));
+
+create table assignment(asssignment_id varchar(20),student_id varchar(20),teacher_id varchar(20),questions varchar(500));
